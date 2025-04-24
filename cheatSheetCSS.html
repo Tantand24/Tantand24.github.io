@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <title>Tristan D. Cheat page CSS</title>
+</head>
+<body>
+    <Nav>
+        <ul id="navbarItem">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="hobby.html">Hobby</a></li>
+            <li class="dropdown"><div class="dropbtn">Code Cheat Sheets</div>
+                <div id="navbarCheatSheets" class="dropdownContent">
+                    <a href="cheatSheetHTML.html">HTML</a>
+                    <a href="cheatSheetCSS.html">CSS</a>
+                </div>
+            </li>
+        </ul>
+    </Nav>
+    <content>
+        <div>  
+            <div id="testBox">Test</div>
+        </div> 
+        <div id="cssForm">
+            <form id="colorChangeForm">
+                <label for="colorValue">To change the color of the test box pick type:</label>
+                <select id="colorValue" onchange="colorValueSelect(this)">
+                    <option></option>
+                    <option value="RGB">RGB values</option>
+                    <option value="RGBA">RGBA values</option>
+                    <option value="HEX">HEX values</option>
+                    <option value="HSL">HSL values</option>
+                    <option value="HSLA">HSLA values</option>
+                </select>
+                <div id="colorinput">
+                    <input type="number" min="0" max="255" disabled hidden id="RGBvalue1" required>
+                    <input type="number" min="0" max="255" disabled hidden id="RGBvalue2" required>
+                    <input type="number" min="0" max="255" disabled hidden id="RGBvalue3" required>
+                    <input type="number" min="0.1" max="1" step="0.1" disabled hidden id="RGBvalue4" required>
+                    <input type="text" size="6" maxlength="6" pattern="[a-fA-F0-9]+" disabled hidden id="HEXvalue" required>
+                    <input type="number" min="0" max="360" disabled hidden id="HSLvalue1" required>
+                    <input type="number" min="0" max="100" disabled hidden id="HSLvalue2" required>
+                    <input type="number" min="0" max="100" disabled hidden id="HSLvalue3" required>
+                    <input type="number" min="0.1" max="1" step="0.1" disabled hidden id="HSLvalue4" required>
+                </div>
+                <button type="submit">Submit Color Value</button>
+            </form>
+            <div id="infoColorInfo"></div><br>
+            <form id="sizingForm">
+                <div id="width">
+                    <label for="widthType">Pick the unit type width will be using:</label>
+                    <select id="widthType" onchange="widthValueSelect(this)">
+                        <option></option>
+                        <option value="vw">vw</option>
+                        <option value="vmin">vmin</option>
+                        <option value="vmax">vmax</option>
+                        <option value="%">%</option>
+                        <option value="px">px</option>
+                    </select>
+                    <div id="widthInput">
+                        <input type="number" min="0" max="100" disabled hidden id="width100" required>
+                        <input type="number" min="0" max="1000" disabled hidden id="widthpx" required>
+                    </div>
+                </div>
+                <div id="height">
+                    <label for="heightType">Pick the unit type height will be using:</label>
+                    <select id="heightType" onchange="heightValueSelect(this)">
+                        <option></option>
+                        <option value="vh">vh</option>
+                        <option value="vmin">vmin</option>
+                        <option value="vmax">vmax</option>
+                        <option value="%">%</option>
+                        <option value="px">px</option>
+                    </select>
+                    <div id="heightInput">
+                        <input type="number" min="0" max="100" disabled hidden id="height100" required>
+                        <input type="number" min="0" max="1000" disabled hidden id="heightpx" required>
+                    </div>
+                </div>
+                <button type="submit">Submit Size Value</button>
+            </form>
+            <div id="widthInfo"></div><br>
+            <div id="heightInfo"></div><br>
+            <!--
+            <form id="MargPadForm">
+                <div id="Margin">
+                    <label for="margSide">Pick how many side to edit margin will be using:</label>
+                    <select id="margSide" onchange="sideMargSelect(this)">
+                        <option></option>
+                        <option value="1">Same for all side</option>
+                        <option value="2">top and bottom then right and left</option>
+                        <option value="3">top then right and left then bottom</option>
+                        <option value="4">top then right them bottom then left</option>
+                    </select><br>
+                    <label for="unitMargType">Pick the unit type margin will be using:</label>
+                    <select id="unitMargType" onchange="unitTypeMargSelect(this)">
+                        <option></option>
+                        <option value="vw">vw</option>
+                        <option value="vh">vh</option>
+                        <option value="vmin">vmin</option>
+                        <option value="vmax">vmax</option>
+                        <option value="px">px</option>
+                    </select><br>
+                    <div id="marginInput">
+                        <input type="number" min="0" max="100" disabled hidden id="margin1" required>
+                        <input type="number" min="0" max="100" disabled hidden id="margin2" required>
+                        <input type="number" min="0" max="100" disabled hidden id="margin3" required>
+                        <input type="number" min="0" max="100" disabled hidden id="margin4" required>
+                        <input type="number" min="0" max="1000" disabled hidden id="marginpx1" required>
+                        <input type="number" min="0" max="1000" disabled hidden id="marginpx2" required>
+                        <input type="number" min="0" max="1000" disabled hidden id="marginpx3" required>
+                        <input type="number" min="0" max="1000" disabled hidden id="marginpx4" required>
+                    </div>
+                </div>
+                <div id="Padding">
+                    <label for="PadSide">Pick how many side to edit Padding will be using:</label>
+                    <select id="PadSide" onchange="sidePadSelect(this)">
+                        <option></option>
+                        <option value="1">Same for all side</option>
+                        <option value="2">top and bottom then right and left</option>
+                        <option value="3">top then right and left then bottom</option>
+                        <option value="4">top then right them bottom then left</option>
+                    </select><br>
+                    <label for="unitPadType">Pick the unit type Padding will be using:</label>
+                    <select id="unitPadType" onchange="unitTypePadSelect(this)">
+                        <option></option>
+                        <option value="vw">vw</option>
+                        <option value="vh">vh</option>
+                        <option value="vmin">vmin</option>
+                        <option value="vmax">vmax</option>
+                        <option value="px">px</option>
+                    </select><br>
+                    <div id="PadInput">
+                        <input type="number" min="0" max="100" disabled hidden id="Pad1" required>
+                        <input type="number" min="0" max="100" disabled hidden id="Pad2" required>
+                        <input type="number" min="0" max="100" disabled hidden id="Pad3" required>
+                        <input type="number" min="0" max="100" disabled hidden id="Pad4" required>
+                        <input type="number" min="0" max="1000" disabled hidden id="Padpx1" required>
+                        <input type="number" min="0" max="1000" disabled hidden id="Padpx1" required>
+                        <input type="number" min="0" max="1000" disabled hidden id="Padpx1" required>
+                        <input type="number" min="0" max="1000" disabled hidden id="Padpx1" required>
+                    </div>
+                </div>
+                <button type="submit">Submit Size Value</button>
+            </form>
+            -->
+        </div>    
+    </content>
+</body>
+</html>

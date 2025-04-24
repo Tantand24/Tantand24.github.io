@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <title>Tristan D. Cheat page HTML</title>
+</head>
+<body>
+    <Nav>
+        <ul id="navbarItem">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="hobby.html">Hobby</a></li>
+            <li class="dropdown"><div class="dropbtn">Code Cheat Sheets</div>
+                <div id="navbarCheatSheets" class="dropdownContent">
+                    <a href="cheatSheetHTML.html">HTML</a>
+                    <a href="cheatSheetCSS.html">CSS</a>
+                </div>
+            </li>
+        </ul>
+    </Nav>
+    <content id="htmlCheat">
+        <!--only one tag can be name with an id-->
+        <!--many tag be name same class id-->
+        <!--the br tag is an linebreak tag-->
+        <div>
+            <div id="headerInfo">Html elements cheat page <br>
+            open the inspect on the webpage to see the elements
+            </div>
+
+            <!--A div that hold different tag for organiztion-->
+            <div id="Organization">
+                <header class="htmlCheat"></header>
+                <content class="htmlCheat"></content>
+                <footer class="htmlCheat"></footer>
+                <nav class="htmlCheat"></nav>
+                <article class="htmlCheat"></article>
+                <aside class="htmlCheat"></aside>
+            </div>
+
+            <div id="examplehtml">
+                <div id="divTestForm">
+                    Html Form
+                    <br><br>
+                    <!--action is for what the form should send to and if there no action it apply to the current page-->
+                    <form id="testForm">
+                        <label for="testSelect">Select is for a drop down list</label><br>
+                        <select name="test select" id="testSelect">
+                        <option value="1">test1</option>
+                        <option value="2">test2</option>
+                        <option value="3">test3</option>
+                        </select><br><br>
+
+                        <label for="testTextArea">For user to input a large amount of text</label><br>
+                        <textarea name="test text area" id="testTextArea"></textarea>
+                        <br>
+                        <label for="textbox">For user to input a single of text</label><br>
+                        <input type="text" id="textbox">
+                        <br>
+                        <label for="password">For password input</label><br>
+                        <input type="password" id="password">
+                        <br><br>
+
+                        <label for="number">For user to input number</label><br>
+                        <input type="number" id="number"><br>
+                        <label for="date">For user to input a date</label><br>
+                        <input type="date" id="date"><br>
+                        <label for="range">For a slide input</label><br>
+                        <input type="range" id="range">
+                        <br><br>
+                        
+                        <label>To allow user to pick more then one option</label><br>
+                        <input type="checkbox" id="checkbox1" name="checkbox" value="1">
+                        <label for="checkbox1">1</label>
+                        <input type="checkbox" id="checkbox2" name="checkbox" value="2">
+                        <label for="checkbox2">2</label>
+                        <input type="checkbox" id="checkbox3" name="checkbox" value="3">
+                        <label for="checkbox3">3</label><br>
+                        <label>To pick only one option out of limited selection</label><br>
+                        <input type="radio" id="radio1" name="radio" value="1">
+                        <label for="radio1">1</label>
+                        <input type="radio" id="radio2" name="radio" value="2">
+                        <label for="radio2">2</label>
+                        <input type="radio" id="radio3" name="radio" value="3">
+                        <label for="radio3">3</label>
+
+                        <br><br>
+                        <label for="reset">To reset the form</label>
+                        <input type="reset"><br>
+                        <label for="submit">To submit the info</label>
+                        <input type="submit" id="submit">
+
+                        <!--Stuff that can be add to each tag are
+                        disable: to disable the input
+                        hidden: to hidden the input
+                        max and min: to add a max or min amount for number input
+                        step: to adjust the intervals for number
+                        size: to adjust the size of some inputs
+                        -->
+                    </form>
+                </div>
+
+                <br><br>
+            
+                <div id="list">
+
+                    <ul>Unorder list
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                    </ul><br><br>
+
+                    <ol>Order list
+                        <li>item</li>
+                        <li>item</li>
+                        <li>item</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </content>
+</body>
+</html>

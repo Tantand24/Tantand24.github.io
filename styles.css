@@ -1,22 +1,188 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+/* For all pages */
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+/* Variable */
+:root{
+    --Primary: #292deb;
+    --Primarydarker: #121499;
+    --Secondary: #7a21a7;
+    --TextcolorW: #ffffff;
+    --TextcolorB: #000000;
+    --Shadow: 0px 8px 16px 0px rgba(0,0,0,0.8);
+    --grad: linear-gradient(#000000, #298deb, #7a21a7);
 }
 
-.container {
+/* Body */
+html{
+    background: var(--grad) no-repeat fixed;
+    background-size: cover;
+}
+
+
+@media screen and (min-width: 600px) {
+    
+/* navbar */
+nav{
+    position: fixed;
+    width: 100vw;
+}
+#navbarItem {
+    display: flex;
+    list-style-type: none;
+    padding-left: 5vw;
+    background-color: var(--Primary);
+}
+  
+li a, .dropbtn {
+    display: inline-block;
+    color: var(--TextcolorW);
+    text-align: center;
+    padding: 1.5vh 1.5vw;
+    text-decoration: none;
+}
+  
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: var(--Primarydarker);
+}
+  
+li.dropdown {
+    display: inline-block;
+}
+  
+.dropdownContent {
+    display: none;
+    position: absolute;
+    background-color: var(--TextcolorW);
+    min-width: 160px;
+    box-shadow: var(--Shadow);
+    z-index: 1;
+}
+  
+.dropdownContent a {
+    color: var(--TextcolorB);
+    padding: 11px 12px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+  
+.dropdownContent a:hover {
+    opacity: 0.5;
+}
+  
+.dropdown:hover .dropdownContent {
+    display: block;
+}
+
+/*For the Index pages*/
+content{
+    padding: 12vh 6vw;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 2vw;
+}
+
+article{
+    display: flex;
+    flex-flow: column wrap;
+    box-shadow: var(--Shadow);
+    padding: 3vw;
+    background-color: var(--TextcolorW);
+    border: 10px double var(--TextcolorB);
+    width: 60vw;
+}
+
+#resume{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 5vmin 9vmin;
+}   
+
+#skills, #moreInfo{
+    margin-top: 2vmin;
+}
+
+#moreInfo{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+#workExperience, #education, #Reference{
+    margin-bottom: 2vmin;
+}
+
+#skills > ul, #workExperience > ul, #education > ul, #Reference > ul{
+    list-style-type: none;
+}
+
+#softSkill{
+    padding-bottom: 3vmin;
+}
+
+aside{
+    background-color: var(--Primarydarker);
+    color: var(--TextcolorW);
+    padding: 3vw;
+    box-shadow: var(--Shadow);
+    position: static;
+}
+aside a{
+    color: var(--TextcolorW);
+    text-decoration: none;
+}
+aside a:hover, aside a:active {
+    opacity: 0.5;
+}
+#profile{
+    margin: 2vh 0vw;
+    width: 20vmin;
+}
+/*For the Html cheat pages*/
+.htmlCheat{
+    display: none;
+}
+
+#htmlCheat{
+    display: flex;
+    flex-flow: column;
+}
+
+#htmlCheat > div{
+    background-color: var(--TextcolorW);
+    padding: 2vw;
+}
+
+#examplehtml{
+    display: flex;
+    justify-content: center;
+    gap: 4vmin;
+}
+
+#headerInfo{
     text-align: center;
 }
 
-h1 {
-    color: red;
-    font-size: 36px;
+#divTestForm, #list{
+    border: 4px dotted var(--Secondary);
+    padding: 2vmin;
 }
 
-p {
-    color: #666;
-    font-size: 18px;
+/*For the Css cheat pages*/
+#testBox{
+    display: flex;
+    box-shadow: var(--Shadow);
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+
+
 }

@@ -19,9 +19,6 @@ html{
     background: var(--grad) no-repeat fixed;
     background-size: cover;
 }
-
-
-@media screen and (min-width: 600px) {
     
 /* navbar */
 nav{
@@ -183,6 +180,3 @@ aside a:hover, aside a:active {
     background-color: #ffffff;
 }
 
-
-
-}
